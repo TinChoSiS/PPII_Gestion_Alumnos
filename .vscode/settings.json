@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 100,
+            "driver": "SQLite",
+            "name": "PPII_DB",
+            "database": "${workspaceFolder:PPII_Gestion_Alumnos}/DB/DB.db"
+        }
+    ]
+}

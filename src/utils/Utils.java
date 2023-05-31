@@ -15,50 +15,42 @@ public class Utils {
     }
 
     public static int nextInt() {
-        Scanner inScanner = new Scanner(System.in, "UTF-8");
+        // Scanner inScanner;
         int usrInput = 0;
         try {
-            usrInput = Integer.parseInt(inScanner.next());
+            usrInput = Integer.parseInt(System.console().readLine());
         } catch (Exception e) {
             usrInput = -1;
         }
-        if (inScanner.hasNext()) {
-            inScanner.nextLine();
-        }
-        inScanner.close();
         return usrInput;
     }
 
     public static String nextLine() {
-        Scanner inScanner = new Scanner(System.in, "UTF-8");
         String usrInput = "";
         try {
-            usrInput = inScanner.nextLine();
+            usrInput = System.console().readLine();
         } catch (Exception e) {
             usrInput = "";
         }
-        inScanner.close();
         return usrInput;
     }
 
     public static String next(){
-        Scanner inScanner = new Scanner(System.in, "UTF-8");
+        Scanner inScanner;
         String usrInput = "";
         try {
+            inScanner = new Scanner(System.in, "UTF-8");
             usrInput = inScanner.next();
         } catch (Exception e) {
             usrInput = "";
         }
-        inScanner.close();
         return usrInput;
     }
 
     public static void continueConfirm() {
-        Scanner inScanner = new Scanner(System.in, "UTF-8");
         println();
         print("Presione ENTER para continuar...");
-        inScanner.nextLine();
-        inScanner.close();
+        nextLine();
 
     }
 

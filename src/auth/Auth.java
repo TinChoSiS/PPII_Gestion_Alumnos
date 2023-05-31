@@ -17,10 +17,10 @@ public class Auth {
             tryCount++;
 
             Utils.print("Nombre de Usuario: ");
-            String username = Utils.next();
+            String username = Utils.nextLine();
 
             Utils.print("Contraseña: ");
-            String password = Utils.next();
+            String password = Utils.nextLine();
 
             Usuario user = dbCtrl.userLogin(username, password);
 

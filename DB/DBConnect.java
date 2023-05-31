@@ -11,6 +11,7 @@ import org.sqlite.SQLiteConfig;
 
 import handlers.ErrorHandler;
 import utils.Menu;
+import utils.Utils;
 
 /**
  * Conection
@@ -30,9 +31,9 @@ public class DBConnect {
         if (!this.dbFile.exists()) {
             boolean initRes = initDB();
             if (initRes) {
-                System.out.println("Base de datos creada con éxito");
+                Utils.println("Base de datos creada con éxito");
             } else {
-                System.out.println("Error al crear la base de datos");
+                Utils.println("Error al crear la base de datos");
                 this.dbFile.delete();
             }
         }
